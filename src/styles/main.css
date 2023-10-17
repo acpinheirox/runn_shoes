@@ -77,7 +77,8 @@ header {
     margin-top: -20px;
 }
 #marcas{
-    height: 400px;
+    margin-top: 30px;
+    height: 500px;
 }
 #marcas p{
     display: flex;
@@ -103,7 +104,7 @@ header {
 }
 
 #elegancia h2 {
-    margin-top: -40px;
+    margin-top: -70px;
     text-align: left;
     justify-content: start;
     font-size: 30px;
