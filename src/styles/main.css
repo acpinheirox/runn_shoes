@@ -321,7 +321,14 @@ footer p{
     color: black;
     cursor: pointer;
 }
-
+@media (max-width:1480px){
+    .menu-hamburguer{
+        display: none;
+    }
+    .cart-icone{
+        display: none;
+    }
+}
 @media (max-width:1080px) {
     .nav{
         padding: 15px;
@@ -332,6 +339,9 @@ footer p{
     .container{
         margin: 0 auto;
         width: 90%;
+    }
+    .menu-hamburguer{
+        display: none;
     }
 }
 @media (max-width:420px){
@@ -373,6 +383,10 @@ footer p{
     #acessorios h2{
         font-size: 20px;
         text-align: center;
+    }
+    #cart-icon{
+        font-size: 10px;
+        cursor: pointer;
     }
 }
 @media (max-width:400px){
@@ -427,6 +441,15 @@ footer p{
     #acessorios h2{
         font-size: 20px;
         text-align: center;
+    }
+    .menu-hamburguer{
+        display: flex;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    #cart-icon{
+        font-size: 10px;
+        cursor: pointer;
     }
 }
 
