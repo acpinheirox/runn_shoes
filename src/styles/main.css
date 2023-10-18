@@ -14,6 +14,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
     padding: 0px 20px;
     width: 950px;
     height: 84px;
@@ -22,8 +23,13 @@ header {
     border-radius: 15px;
     background: rgba(242, 236, 190, 0.65);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 1s;
+    z-index: 100;
 }
-
+header:hover{
+    transition: all 1s;
+    background: rgb(242, 236, 190);
+}
 .links{
     display: flex;
     flex-direction: row;
@@ -67,7 +73,7 @@ header {
     margin-top: 20px;
 }
 .container-home{
-    padding: 70px 40px;
+    padding: 150px 40px;
     color: white;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 20px;
@@ -115,15 +121,7 @@ header {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#calcados p,
-#acessorios p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto Slab', serif;
-    margin-top: 13px;
-    color: #4d4d4d;
-}
+
 #calcados .container,
 #acessorios .container{
     flex-direction: row;
@@ -147,26 +145,42 @@ header {
     border: none;
     cursor: pointer;
 }
-
-#calcados .container span,
-#acessorios .container span{
-    width: 274px;
-    height: 271px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-#calcados .container .tenis img,
-#acessorios .container .acessorios img{
-    transition: all 1s;
-}
-#calcados .container .tenis span img,
-#acessorios .container .acessorios img:hover{
-    transform: translateY(-10px);
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
 }
 .product-title{
-    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
     justify-content: center;
     font-family: 'Roboto Slab', serif;
+}
+.price{
+    font-weight: 500;
+}
+.add-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+}
+.add-cart:hover{
+    background-color: hsl(249, 32%, 17%);
+}
+.product-box{
+    position: relative;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid black;
+    transition: 0.4s;
 }
 footer{
     background-color: black;
@@ -205,16 +219,17 @@ footer p{
 .cart{
     position: fixed;
     top: 0;
-    right: 0;
-    width: 300px;
+    right: -100%;
+    width: 290px;
     min-height: 100vh;
     padding: 20px;
     background-color: #fffef3;
     box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 .cart.active{
     right: 0;
+    transition: all 0.3s;
 }
 .cart-title{
     text-align: center;
@@ -305,4 +320,118 @@ footer p{
     font-size: 2rem;
     color: black;
     cursor: pointer;
+}
+
+@media (max-width:1080px) {
+    .nav{
+        padding: 15px;
+    }
+    section{
+        padding: 3rem 0 2rem;
+    }
+    .container{
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+@media (max-width:420px){
+    header{
+        width: 280px;
+    }
+    .links{
+        display: none;
+    }
+    #esportes .container, #marcas .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #esportes h2, #marcas h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    #marcas p{
+        text-align: center;
+    }
+    #elegancia {
+        background: url(/images/background-2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px;
+        height: 230px;
+        margin-top: 500px;
+        text-align: left;
+        color: white;
+        font-family: 'Roboto Slab', serif;
+    }
+    #elegancia h2{
+        margin-top: -160px;
+        font-size: 20px;
+    }
+    #calcados h2,
+    #acessorios h2{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+@media (max-width:400px){
+    .nav{
+        padding: 11px;
+    }
+    .cart{
+        width: 320px;
+    }
+    header{
+        width: 240px;
+    }
+    .links{
+        display: none;
+    }
+    #cart-icon{
+        display: contents;
+    }
+    .container-home{
+        margin-top: 30px;
+        font-size: 16px;
+    }
+    #esportes .container, #marcas .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #esportes h2, #marcas h2{
+        font-size: 20px;
+        text-align: center;
+    }
+    #marcas p{
+        text-align: center;
+    }
+    #elegancia {
+        background: url(/images/background-2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px;
+        height: 230px;
+        margin-top: 500px;
+        text-align: left;
+        color: white;
+        font-family: 'Roboto Slab', serif;
+    }
+    #elegancia h2{
+        margin-top: -160px;
+        font-size: 20px;
+    }
+    #calcados h2,
+    #acessorios h2{
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width:360px){
+    .cart{
+        width: 280px;
+    }
 }
