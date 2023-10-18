@@ -554,6 +554,9 @@ footer p{
         list-style: none;
         margin-bottom: 10px;
     }
+    .footer h2{
+        font-size: 5px;
+    }
     .cart{
         position: fixed;
         top: 0;
@@ -593,7 +596,7 @@ footer p{
         background-repeat: no-repeat;
         padding: 20px;
         height: 230px;
-        margin-top: 550px;
+        margin-top: 580px;
         text-align: left;
         color: white;
         font-family: 'Roboto Slab', serif;
