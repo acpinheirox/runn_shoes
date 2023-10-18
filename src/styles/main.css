@@ -111,8 +111,26 @@ header {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
-
-
+#calcados p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+    margin-top: -10px;
+}
+#calcados .container{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#calcados .container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 192px;
+    height: 33px;
+    color: white;
+    background-color: #9A3B3B;
+    border-radius: 20px;
+}
 
 
