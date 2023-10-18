@@ -467,14 +467,23 @@ footer p{
     }
     #calcados h2,
     #acessorios h2{
+        margin-top: 0px;
+    }
+    #esportes h2{
         margin-top: -200px;
     }
     #esportes h2, #marcas h2{
         font-size: 20px;
         text-align: center;
     }
+    #marcas h2{
+        margin-top: 50px;
+    }
     #marcas p{
         text-align: center;
+    }
+    .explore{
+        margin-top: 35px;
     }
     #elegancia {
         background: url(/images/background-2.png);
@@ -522,7 +531,7 @@ footer p{
         border-radius: 15px;
         padding: 10px;
         position: absolute;
-        top: 69px;
+        top: 48px;
         right: 0px;
         width: 260px;
         transition: all 0.6s;
