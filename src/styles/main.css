@@ -357,6 +357,36 @@ footer p{
     .cart-icone{
         display: none;
     }
+    .cart{
+        width: 300px;
+    }
+    header{
+        width: 1150px;
+        align-items: center;
+    }
+    header img{
+        align-items: center;
+    }
+    #calcados,
+    #acessorios{
+        margin-top: -200px;
+        
+    }
+    #calcados h2,
+    #acessorios h2{
+        display: flex;
+        margin-top: -200px;
+    }
+    .h2-esportes{
+        margin-top: 400px;
+    }
+    #marcas{
+        margin-top: -300px;
+    }
+    #elegancia h2{
+        text-align: left;
+        margin-top: -500px;
+    }
 }
 @media (max-width:1080px) {
     .nav{
