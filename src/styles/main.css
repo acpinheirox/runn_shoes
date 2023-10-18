@@ -361,7 +361,7 @@ footer p{
         width: 300px;
     }
     header{
-        width: 1200px;
+        width: 1210px;
         align-items: center;
     }
     header img{
@@ -386,6 +386,9 @@ footer p{
     #elegancia h2{
         text-align: left;
         margin-top: -500px;
+    }
+    .container-home{
+        margin-top: 30px;
     }
 }
 @media (max-width:1080px) {
