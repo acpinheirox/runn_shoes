@@ -163,7 +163,11 @@ header {
 #acessorios .container .acessorios img:hover{
     transform: translateY(-10px);
 }
-
+.product-title{
+    text-align: center;
+    justify-content: center;
+    font-family: 'Roboto Slab', serif;
+}
 footer{
     background-color: black;
     height: 300px;

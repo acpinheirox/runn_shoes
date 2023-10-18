@@ -49,8 +49,20 @@ function quantityChanged(event){
 // Add Cart
 
 function addCartClicked(event){
-    var bu
+    var button = event.target
+    var shopPorducts = button.parentElement
+    var title = shopPorducts.getElementsByClassName('product-title')[0].innerText;
+    var price = shopPorducts.getElementsByClassName('price')[0].innerText;
+    var productImg = shopPorducts.getElementsByClassName('product-img')[0].src;
+    addProductToCart(title, price, productImg0);
+    updateTotal();
 }
+
+function addProductToCart(title, price, productImg){
+    var cartShopBox = document.createElement('div')
+    //cartShopBox.classList.add('cart-box')
+    var cartItems = document.getElementsByClassName('cart-content');
+    var cartItemsNames = cartItems.getElementsByClassName('cart-product-title')
 
 // Update Total
 function updateTotal(){
