@@ -16,8 +16,8 @@ header {
     justify-content: space-between;
     position: fixed;
     padding: 0px 20px;
-    width: 950px;
-    height: 84px;
+    width: 630px;
+    height: 64px;
     margin-left: 40px;
     margin-top: 20px;
     border-radius: 15px;
@@ -54,7 +54,36 @@ header:hover{
     font-size: 25px;
     cursor: pointer;
 }
+.menu-hamburguer {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
+.nav.active .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 84px;
+    right: 0;
+    width: 100%;
+    background: rgba(242, 236, 190, 0.65);
+    border-radius: 15px;
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.nav.active .links li {
+    list-style: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.mobile-menu-toggle {
+    display: none; /* Ocultar o ícone do menu em telas maiores */
+    font-size: 30px;
+    cursor: pointer;
+}
 #esportes {
     margin-top: 20px;
 }
@@ -220,7 +249,7 @@ footer p{
     position: fixed;
     top: 0;
     right: -100%;
-    width: 290px;
+    width: 250px;
     min-height: 100vh;
     padding: 20px;
     background-color: #fffef3;
@@ -344,18 +373,68 @@ footer p{
         display: none;
     }
 }
+
 @media (max-width:420px){
     header{
         width: 280px;
     }
-    .links{
-        display: none;
+    .mobile-menu-toggle {
+        display: flex; 
+        font-size: 30px;
+        cursor: pointer;
     }
+    .links {
+        display: none;
+        background: rgba(242, 236, 190, 0.65);
+        border-radius: 15px;
+        padding: 10px;
+        position: absolute;
+        top: 69px;
+        right: 0px;
+        width: 300px;
+        transition: all 0.6s;
+    }
+    .links:hover{
+        background: rgb(242, 236, 190);
+        transition: all 0.6s;
+    }
+    #nav-links .icone{
+        display: block;
+        font-size: 20px;
+    }
+    .links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .links li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .h2-esportes{
+        margin-top: 200px;
+    }
+    .cart{
+        position: fixed;
+        top: 0;
+        width: 260px;
+        min-height: 100vh;
+        padding: 20px;
+        background-color: #fffef3;
+        box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+        transition: all 0.3s;
+    }
+
     #esportes .container, #marcas .container{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+    }
+    #calcados h2,
+    #acessorios h2{
+        margin-top: -200px;
     }
     #esportes h2, #marcas h2{
         font-size: 20px;
@@ -370,7 +449,7 @@ footer p{
         background-repeat: no-repeat;
         padding: 20px;
         height: 230px;
-        margin-top: 500px;
+        margin-top: 550px;
         text-align: left;
         color: white;
         font-family: 'Roboto Slab', serif;
@@ -399,8 +478,49 @@ footer p{
     header{
         width: 240px;
     }
-    .links{
+    .mobile-menu-toggle {
+        display: flex; 
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .links {
         display: none;
+        background: rgba(242, 236, 190, 0.65);
+        border-radius: 15px;
+        padding: 10px;
+        position: absolute;
+        top: 69px;
+        right: 0px;
+        width: 260px;
+        transition: all 0.6s;
+    }
+    .links:hover{
+        background: rgb(242, 236, 190);
+        transition: all 0.6s;
+    }
+    #nav-links .icone{
+        display: block;
+        font-size: 20px;
+    }
+    .links.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .links li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .cart{
+        position: fixed;
+        top: 0;
+        width: 260px;
+        min-height: 100vh;
+        padding: 20px;
+        background-color: #fffef3;
+        box-shadow: -2px 0 4px hsl(0, 4%, 15% / 10%);
+        transition: all 0.3s;
     }
     #cart-icon{
         display: contents;
@@ -415,6 +535,9 @@ footer p{
         justify-content: center;
         flex-direction: column;
     }
+    #esportes h2{
+        margin-top: -200px;
+    }
     #esportes h2, #marcas h2{
         font-size: 20px;
         text-align: center;
@@ -428,7 +551,7 @@ footer p{
         background-repeat: no-repeat;
         padding: 20px;
         height: 230px;
-        margin-top: 500px;
+        margin-top: 550px;
         text-align: left;
         color: white;
         font-family: 'Roboto Slab', serif;
@@ -436,6 +559,10 @@ footer p{
     #elegancia h2{
         margin-top: -160px;
         font-size: 20px;
+    }
+    #calcados h2,
+    #acessorios h2{
+        margin-top: -200px;
     }
     #calcados h2,
     #acessorios h2{
@@ -450,11 +577,5 @@ footer p{
     #cart-icon{
         font-size: 10px;
         cursor: pointer;
-    }
-}
-
-@media (max-width:360px){
-    .cart{
-        width: 280px;
     }
 }

@@ -114,3 +114,13 @@ function updateTotal(){
         document.getElementsByClassName('total-price')[0].innerText = "R$" + total;
     
 }
+
+// Seleciona o ícone do menu e o menu de navegação
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// Adiciona um ouvinte de evento para alternar a classe 'active' no menu
+mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
